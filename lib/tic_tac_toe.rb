@@ -12,14 +12,14 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-def move(board, position, player)
-  board[position] = player
+def move(board, index, player)
+  board[index] = player
 end
 
-def position_taken?(board, position)
-  board[position] == "X" || board[position] == "O"
+def position_taken?(board, index)
+  board[index] == "X" || board[index] == "O"
 end
 
-def valid_move?(board, position)
-  !position_taken?(board, position) && position
+def valid_move?(board, index)
+  !position_taken?(board, index) && index.between()
 end
