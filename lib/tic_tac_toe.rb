@@ -9,4 +9,16 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  input.to_s
+  input.to_i - 1
+end
+
+def move(board, position, player)
+  board[position] = player
+end
+
+def position_taken?(board, position)
+  board[position] == "X" || board[position] == "O"
+end
+
+def valid_move?
+end
